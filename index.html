@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaldi's Super Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="images/Logo.jpeg" alt="Kaldi's Super Store Logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#specials"> Specials</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#store">Inside Store</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Cart toggle button: opens the cart drawer, badge shows number of items -->
+        <button class="cart-toggle" id="cartToggle" aria-label="Open shopping cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <h1>Welcome to Kaldi's Super Store</h1>
+        <p>Best Prices • Fresh Products • Quality Service</p>
+        <a href="#specials" class="btn">View Specials</a>
+    </section>
+
+    <!-- Specials -->
+    <section id="specials">
+        <h2>🔥 20% OFF SPECIALS</h2>
+
+        <div class="products-grid">
+
+            <div class="card">
+                <img src="images/ellis.jpg" alt="ellis">
+                <h3>Ellis Brown coffee creamer 750g</h3>
+                <p class="old-price">R66,99</p>
+                <p class="new-price">R54,99</p>
+                <button class="add-to-cart-btn"
+                    data-id="Ellis Brown coffee creamer 750g"
+                    data-name="Ellis Brown coffee creamer 750g<"
+                    data-price="54,99"
+                    data-image="images/ellis.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="images/bokomo.jpg" alt="bokomo 1kg">
+                <h3>bokomo corn flakes 1kg</h3>
+                <p class="old-price">R65,99</p>
+                <p class="new-price">R54,99</p>
+                <button class="add-to-cart-btn"
+                    data-id="bokomo corn flakes 1kg"
+                    data-name="bokomo corn flakes 1kg"
+                    data-price="54,99"
+                    data-image="images/bokomo.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="search-section">
+
+        <h2>Find Products Quickly</h2>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for rice, bread, milk, cooldrink..."
+            >
+        </div>
+
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+
+        <h2>Products Available In Store</h2>
+
+        <div class="products-grid" id="productList">
+
+            <div class="card product-card">
+                <img src="images/Doritos.jpg" alt="Doritos">
+                <h3>Doritos</h3>
+                <p>Sweet chilli pepper Good taste</p>
+                <span class="price">R24.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="doritos"
+                    data-name="Doritos"
+                    data-price="24.99"
+                    data-image="images/Doritos.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/jungle Oats.jpg" alt="Jungle Oats">
+                <h3>jungle Oats 1kg</h3>
+                <p>Fresh</p>
+                <span class="price">R46.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="jungle-oats"
+                    data-name="Jungle Oats"
+                    data-price="46.99"
+                    data-image="images/jungle Oats.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/Kelloggysblack.jpg" alt="Kelloggysblack">
+                <h3>Kelloggy's Hot & Spicy 5x70g</h3>
+                <p>Instant Noodles</p>
+                <span class="price">R29.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="kelloggysblack"
+                    data-name="Kelloggysblack"
+                    data-price="29.99"
+                    data-image="images/Kelloggysblack.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/luckystar.jpg" alt="Luckystar">
+                <h3>Lucky star</h3>
+                <p>Pilchards in Tomato Sauce 400g</p>
+                <span class="price">R25.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="luckystar"
+                    data-name="Luckystar"
+                    data-price="25.99"
+                    data-image="images/luckystar.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/Selati sugar.jpg" alt="Sugar 2.5kg">
+                <h3>Selati Pure White Sugar 2.5kg</h3>
+                <p>Sprinkle Joy</p>
+                <span class="price">R54.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="Selati Pure White Sugar 2.5kg"
+                    data-name="Selati Pure White Sugar 2.5kg"
+                    data-price="54.99"
+                    data-image="images/Selati sugar.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/Saskobrown.jpg" alt="Saskobrown">
+                <h3>Sasko Premium Slices Brown</h3>
+                <p>Bread</p>
+                <span class="price">R17.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="saskobrown"
+                    data-name="Saskobrown"
+                    data-price="17.99"
+                    data-image="images/Saskobrown.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/Six Gun.jpg" alt="Six Gun">
+                <h3>Six Gun</h3>
+                <span class="price">R34.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="six-gun"
+                    data-name="Six Gun"
+                    data-price="34.99"
+                    data-image="images/Six Gun.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/Simba.jpg" alt="Simba Snacks">
+                <h3>Simba Mrs H.S Ball's</h3>
+                <p>Chutney Flavoured Potato</p>
+                <span class="price">R19.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="simba-snacks"
+                    data-name="Simba Snacks"
+                    data-price="19.99"
+                    data-image="images/Simba.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/SnowFlake.jpg" alt="SnowFlake 2.5">
+                <h3>SnowFlake Cake Wheat 2.5Kg</h3>
+                 <p>Flower</p>
+                <span class="price">R40.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="snowflake-2-5"
+                    data-name="SnowFlake 2.5"
+                    data-price="40.99"
+                    data-image="images/SnowFlake.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/spheres.jpg" alt="Spheres 150g">
+                <h3>Chelsea Spheres 180g</h3>
+                 <p>Vanilla Biscuits 6x30g</p>
+                <span class="price">R59.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="spheres-150g"
+                    data-name="Spheres 150g"
+                    data-price="59.99"
+                    data-image="images/spheres.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/Spookies.jpg" alt="Spookies">
+                <h3>Truda Spookies Chicken </h3>
+                 <p>Chills chicken Flavoured 100g</p>
+                <span class="price">R9.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="spookies"
+                    data-name="Spookies"
+                    data-price="9.99"
+                    data-image="images/Spookies.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/tomatosauge.jpg" alt="All Gold">
+                <h3>All Gold Tomato Sauce 700ml</h3>
+                <span class="price">R39.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="all-gold"
+                    data-name="All Gold"
+                    data-price="39.99"
+                    data-image="images/tomatosauge.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+        </div>
+        <div class="pagination">
+            <button id="prevBtn">← Previous</button>
+            <span id="pageNumber">Page 1</span>
+            <button id="nextBtn">Next →</button>
+        </div>
+    </section>
+
+    <section id="water-product" class="water-section">
+
+        <h2>💧 Bottled Water Specials</h2>
+
+        <div class="water-slider">
+
+            <div class="water-slide active">
+                <img src="images/5L.jpeg" alt="Still Water">
+                <h3>Still Water 500ml</h3>
+                <span class="price">R9.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="still-water-500ml"
+                    data-name="Still Water 500ml"
+                    data-price="9.99"
+                    data-image="images/5L.jpeg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="water-slide">
+                <img src="images/2L.jpg" alt="Spring Water">
+                <h3>Spring Water 1.5L</h3>
+                <span class="price">R14.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="spring-water-1-5l"
+                    data-name="Spring Water 1.5L"
+                    data-price="14.99"
+                    data-image="images/2L.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="water-slide">
+                <img src="images/4L.jpg" alt="Mineral Water">
+                <h3>Mineral Water 2L</h3>
+                <span class="price">R19.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="mineral-water-2l"
+                    data-name="Mineral Water 2L"
+                    data-price="19.99"
+                    data-image="images/4L.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="water-slide">
+                <img src="images/3L.jpg" alt="Purified Water">
+                <h3>Purified Water 5L</h3>
+                <span class="price">R29.99</span>
+                <button class="add-to-cart-btn"
+                    data-id="purified-water-5l"
+                    data-name="Purified Water 5L"
+                    data-price="29.99"
+                    data-image="images/3L.jpg">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Inside Store -->
+    <section id="store">
+        <h2>Inside Our Store</h2>
+
+        <div class="store-gallery">
+            <img src="images/store1.jpeg" alt="">
+            <img src="images/store2.jpeg" alt="">
+            <img src="images/store3.jpeg" alt="">
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <p>📍 No 6 Western Road, Port Elizabeth</p>
+        <p>📞 060 889 9073</p>
+
+        <div class="contact-actions">
+            <button id="whatsappBtn">
+                <i class="fab fa-whatsapp"></i>
+                Chat on WhatsApp
+            </button>
+
+            <button id="downloadContactBtn">
+                <i class="fas fa-download"></i>
+                Save Contact
+            </button>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="#" class="whatsapp-float" id="floatingWhatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>© 2026 Kaldi's Super Store. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- SHOPPING CART, CHECKOUT & ORDER SYSTEM (added on top of the   -->
+    <!-- existing store — nothing above this comment was removed)     -->
+    <!-- ============================================================ -->
+
+    <!-- Dark overlay shown behind the cart drawer / modals -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Shopping Cart Drawer -->
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Your Cart</h2>
+            <button class="close-btn" id="closeCart" aria-label="Close cart">&times;</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-msg" id="emptyCartMsg">Your cart is empty. Start adding products!</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-summary-row">
+                <span>Total Items:</span>
+                <span id="cartTotalItems">0</span>
+            </div>
+            <div class="cart-summary-row total-row">
+                <span>Grand Total:</span>
+                <span id="cartGrandTotal">R0.00</span>
+            </div>
+            <button class="place-order-btn" id="placeOrderBtn" disabled>Place Order</button>
+        </div>
+    </aside>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeCheckout" aria-label="Close checkout">&times;</button>
+            <h2>Checkout</h2>
+            <p class="modal-subtitle">Please fill in your details to complete your order.</p>
+
+            <div class="order-review" id="orderReview">
+                <!-- Order summary is injected here by script.js -->
+            </div>
+
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="surname">Surname *</label>
+                    <input type="text" id="surname" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number *</label>
+                    <input type="tel" id="phoneNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsappNumber">WhatsApp Number *</label>
+                    <input type="tel" id="whatsappNumber" required>
+                </div>
+
+                <button type="submit" class="submit-order-btn" id="submitOrderBtn">
+                    <span id="submitBtnText">Confirm Order</span>
+                    <span id="submitSpinner" class="spinner hidden"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-content">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h2>Thank you for your order!</h2>
+            <p>Your order has been received successfully.</p>
+            <p class="order-number">Order Number: <span id="orderNumberDisplay"></span></p>
+            <p>We will contact you shortly to confirm your order and arrange delivery.</p>
+            <button class="btn" id="closeSuccessBtn">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
